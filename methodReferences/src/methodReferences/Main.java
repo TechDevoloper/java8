@@ -3,6 +3,7 @@ package methodReferences;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class Main {
 	
@@ -27,7 +28,10 @@ public class Main {
 		
 		//Using Method Reference
 	    str.sort(String::compareToIgnoreCase);
-	    System.out.println(str);  
+	    System.out.println(str); 
+	    
+	    Function<Integer,Integer>square=n->n*n;
+	    System.out.println(square.apply(5));
 
 		
 	}
